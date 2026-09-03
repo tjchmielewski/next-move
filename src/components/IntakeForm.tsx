@@ -47,7 +47,7 @@ export default function IntakeForm({ onSubmit, onStop, busy }: Props) {
         if (canSubmit) onSubmit({ situation, where, blockers, audience });
       }}
     >
-      <Field n={1} label="What's going on?" hint="A paragraph is perfect. Names, systems, the exact phrase your exec used — all useful.">
+      <Field n={1} label="What's going on?" hintBelow hint="A paragraph is perfect. Names, systems, the exact phrase your exec used — all useful.">
         <textarea
           value={situation}
           onChange={(e) => setSituation(e.target.value.slice(0, MAX_SITUATION_CHARS))}
@@ -127,15 +127,29 @@ export default function IntakeForm({ onSubmit, onStop, busy }: Props) {
   );
 }
 
-function Field({ n, label, hint, children }: { n: number; label: string; hint?: string; children: React.ReactNode }) {
+function Field({
+  n,
+  label,
+  hint,
+  hintBelow,
+  children,
+}: {
+  n: number;
+  label: string;
+  hint?: string;
+  hintBelow?: boolean;
+  children: React.ReactNode;
+}) {
+  const hintEl = hint && <p className={`text-xs text-muted ${hintBelow ? "mt-1.5" : "-mt-1 mb-2.5"}`}>{hint}</p>;
   return (
     <div className="mb-5 last:mb-0">
       <div className="mb-2 flex items-baseline gap-2">
         <span className="font-display text-sm text-accent">{n}</span>
         <span className="text-sm font-semibold">{label}</span>
       </div>
+      {!hintBelow && hintEl}
       {children}
-      {hint && <p className="mt-1.5 text-xs text-muted">{hint}</p>}
+      {hintBelow && hintEl}
     </div>
   );
 }
