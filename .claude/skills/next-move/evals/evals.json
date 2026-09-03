@@ -1,0 +1,26 @@
+{
+  "skill_name": "next-move",
+  "evals": [
+    {
+      "id": 0,
+      "name": "ceo-fuzzy-ask",
+      "prompt": "I'm a PM at a retirement/401k recordkeeping software company. Our CEO said in a leadership meeting that he wants a \"simpler enrollment experience\" for participants by end of Q1 and now it's on my plate. Nobody has defined what simpler means. Ops thinks it means fewer screens, compliance is already nervous about anything that touches the contribution election and disclosures, and the enrollment flow runs on a legacy system that another team owns. I don't know where to start. What should I do next?",
+      "expected_output": "A read that names the real problem (undefined ask + legacy dependency + compliance touchpoint), an Initiative One-Pager in interpretation mode with 2-3 readings of 'simpler', honest evidence gaps, out-of-scope list, and a next move that takes the readings back to the CEO for a pick.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "roadmap-archaeology",
+      "prompt": "There's an item on our product roadmap called \"Accessible Balance & Eligibility\" that's been sitting there for about 2-3 years. The people who put it there have mostly moved on. My director expects me to build it this half because it's on the roadmap, but when I ask why, nobody can tell me what problem it solves or who asked for it. I'm a product designer/PM in retirement plan software. I feel stuck between building something nobody can explain and pushing back with no ammunition. Help.",
+      "expected_output": "A read that legitimizes the question, a One-Pager in reconstruction mode with probable original rationales marked as inferred, what's changed since, an explicit build/rescope/retire recommendation, and a next move that schedules that decision with the director.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "design-review-routing",
+      "prompt": "I have Figma designs done for a redesigned participant dashboard in our 401k web app — it surfaces account balance, vesting status, and a new 'you may be eligible for' section that nudges people toward things like increasing contributions or a Roth option. I need to get this reviewed before engineering picks it up in two weeks but honestly I have no idea who it needs to go through at my company or in what order. We have compliance, legal, a plan services team, client relationship managers, InfoSec, and a design team. How do I get this reviewed properly?",
+      "expected_output": "A Review Request with a routing table derived from what the design touches (eligibility nudges → compliance/plan services; balance/vesting → plan services; PII → InfoSec; client-facing → CRMs), ordered with feasibility/compliance first and design polish later, approver vs advisor distinction, per-reviewer asks, proceed-by-default line, and a next move.",
+      "files": []
+    }
+  ]
+}
