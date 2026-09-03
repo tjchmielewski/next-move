@@ -52,7 +52,7 @@ export default function IntakeForm({ onSubmit, onStop, busy }: Props) {
           value={situation}
           onChange={(e) => setSituation(e.target.value.slice(0, MAX_SITUATION_CHARS))}
           rows={7}
-          placeholder="Our CEO said he wants a “simpler enrollment experience” by end of Q1. Nobody has defined simpler. Ops thinks fewer screens, compliance is nervous about the contribution election, and the flow runs on a legacy system another team owns…"
+          placeholder="Our VP of Humbug came out of a client meeting saying we need to “modernize the claims experience” before renewals. That’s the entire brief. Support hears a status tracker, design hears a refresh, and anything touching payment timing goes through compliance…"
           className="w-full resize-y rounded-lg border border-line bg-paper px-3.5 py-3 text-[0.95rem] leading-relaxed outline-none placeholder:text-muted/60 focus:border-accent focus:ring-2 focus:ring-accent/20"
         />
         <div className="mt-1.5 flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-xs text-muted">
